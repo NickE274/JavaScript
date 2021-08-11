@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyng / Defer</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="js/test.js"></script>
+    <script async src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="one">
+        <a href="index.html">На главную</a>
+        <a href="test.html">Повторить</a>
+    </div>
+
+    <div class="two">
+
+        <ul>
+            Итого:
+            <li>Скрипты вставляются на страницу как текст в теге script, либо как внешний файл через script src="путь"
+            </li>
+            <li>Специальные атрибуты async и defer используются для того, чтобы пока грузится внешний скрипт – браузер
+                показал остальную (следующую за ним) часть страницы. Без них этого не происходит.</li>
+            <li>Разница между async и defer: атрибут defer сохраняет относительную последовательность скриптов, а async
+                – нет. Кроме того, defer всегда ждёт, пока весь HTML-документ будет готов, а async – нет.</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
