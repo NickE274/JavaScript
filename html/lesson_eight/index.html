@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .border {
+            z-index: -15;
+            position: absolute;
+            top: 0px;
+            background-color: #345f1d;
+            left: 39px;
+            width: 510px;
+            height: 559px;
+            border: 2px solid #001100;
+        }
+
+        button {
+            border-radius: 10px;
+            padding: 7px;
+            background: linear-gradient(to top, #FFFAFA, #8B8682);
+            font-weight: 600;
+        }
+
+        .buttons {
+            margin: 20px 10px 20px 140px;
+        }
+
+        .score {
+            margin-left: 72px;
+            font-size: 23px;
+            color: #ffd900;
+            text-shadow: 0 0 6px #010;
+        }
+
+        .field {
+            z-index: 30;
+            height: 23px;
+            margin-left: 53px;
+        }
+
+        .cell {
+            margin: 0;
+            display: inline-block;
+            background-color: #7FFFD4;
+            width: 22px;
+            height: 22px;
+            border: 1px solid #010;
+            border-radius: 4px;
+            z-index: 30;
+            transition: background-color 0.3s;
+        }
+
+        .snake {
+            box-shadow: 0 0 10px #000000 inset;
+            background: linear-gradient(to right, #00FF00, #556B2F);
+            z-index: 30;
+            transition: background 0.2s;
+        }
+
+        .food {
+            background-color: #FF0000;
+            z-index: 30;
+            box-shadow: 0 0 10px #000000 inset;
+            transition: background-color 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="script.js">
+    </script>
+
+    <div class="border"></div>
+
+    <div class="buttons">
+        <button id="easy" onclick="EasyStart()">Простой</button>
+        <button id="medium" onclick="MediumStart()">Средний</button>
+        <button id="hard" onclick="HardStart()">Сложный</button>
+        <button onclick="reload()">Сбросить</button>
+    </div>
+
+    <div class="score">Ваш счет: 0</div>
+
+</body>
+
+</html>
